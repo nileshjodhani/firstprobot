@@ -51,10 +51,11 @@ async def upload_to_tg(
             "starting upload of {}".format(os.path.basename(local_file_name))
         )
 
-
+        caption = os.path.basename(local_file_name)
         await message.reply_document(
             document=local_file_name,
             parse_mode="html",
+            caption = caption,
             disable_notification=True,
             progress=progress_for_pyrogram,
             progress_args=(
