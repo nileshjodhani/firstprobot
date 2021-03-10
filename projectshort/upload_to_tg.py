@@ -50,20 +50,20 @@ async def upload_to_tg(
         message_for_progress_display = await message.reply_text(
             "starting upload of {}".format(os.path.basename(local_file_name))
         )
-        try:
-           new_name = base_file_name[0:64]
-           extension = base_file_name.split(".")
-           extension = extension[-1]
-           print(new_name,extension)
-           new_name = new_name+ extension
-           new_local_file = local_file_name.split("/")
-           new_local_file = new_local_file[0:-1]
-           print(local_file_name, new_local_file)
-           os.rename(local_file_name, new_local_file)
-           local_file_name = new_local_file
-        except:
-           print(Exception)
-           pass
+        #try:
+           #new_name = base_file_name[0:64]
+           #extension = base_file_name.split(".")
+           #extension = extension[-1]
+           #print(new_name,extension)
+           #new_name = new_name+ extension
+           #new_local_file = local_file_name.split("/")
+           #new_local_file = new_local_file[0:-1]
+           #print(local_file_name, new_local_file)
+           #os.rename(local_file_name, new_local_file)
+           #local_file_name = new_local_file
+        #except:
+           #print(Exception)
+           #pass
         caption = os.path.basename(local_file_name)
         await message.reply_document(
             document=local_file_name,
