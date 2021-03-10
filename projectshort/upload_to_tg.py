@@ -69,7 +69,7 @@ async def upload_to_tg(
             document=local_file_name,
             parse_mode="html",
             disable_notification=True,
-            caption = caption
+            caption = caption,
             progress=progress_for_pyrogram,
             progress_args=(
                 "trying to upload",
