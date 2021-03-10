@@ -3,5 +3,5 @@ youtube-dl
 Pillow
 hachoir
 aiohttp
-tgcrypto
+
 asyncio
